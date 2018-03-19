@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mildbot.sharebear.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="385dp"
+        android:layout_height="511dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/UnLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/UnField"
+            android:layout_alignBottom="@+id/UnField"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:text="@string/username"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/UnField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="28dp"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/PwdLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/PwdField"
+            android:layout_alignBottom="@+id/PwdField"
+            android:layout_alignLeft="@+id/UnLbl"
+            android:layout_alignStart="@+id/UnLbl"
+            android:text="@string/password"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/PwdField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/UnField"
+            android:layout_alignStart="@+id/UnField"
+            android:layout_below="@+id/UnField"
+            android:layout_marginTop="15dp"
+            android:ems="10"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/SaveInfoBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/PwdLbl"
+            android:layout_alignStart="@+id/PwdLbl"
+            android:layout_below="@+id/PwdField"
+            android:layout_marginTop="34dp"
+            android:onClick="saveInfo"
+            android:text="@string/save_info" />
+
+        <Button
+            android:id="@+id/DisplayInfoBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/PwdField"
+            android:layout_alignRight="@+id/PwdField"
+            android:layout_alignTop="@+id/SaveInfoBtn"
+            android:onClick="displayData"
+            android:text="@string/display_info" />
+
+        <TextView
+            android:id="@+id/DisplayUserInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/DisplayInfoBtn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="96dp"
+            android:text="Loading..."
+            android:textSize="18sp" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
